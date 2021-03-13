@@ -1,25 +1,152 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;700&display=swap')
 
-$font-size-lg: 1.25rem
+$font-size-lg: 1rem
 $font-weight-lg: 700
 $font-size-sm: .8rem
 $font-weight-sm: 200
 $dark-blue: #48556a
+$mobile-blue: #6E8098
 $light-blue: #9daec2
+$light-gray: #ecf2f8
 $white: #ffffff
 
 *
     box-sizing: border-box
     padding: 0
     margin: 0
+body
+    background-color: lighten($light-blue, 20%)
+    font-family: 'manrope', san-serif
 .card
     display: flex
-    width: 100%
+    width: 85%
+    height: 34rem
+    border-radius: 1rem
+    flex-wrap: wrap
+    margin: auto
+    margin-top: 10rem
+    background-color: $white
 
 .content
     display: flex
     flex-direction: column
+    text-align: left
+    h1
+        font-size: $font-size-lg
+        font-weight: $font-weight-lg
+        color: $dark-blue
+        padding: 0 2rem
+        margin-top: 2rem
+        margin-bottom: 1rem
+    p
+        font-size: $font-size-sm
+        font-weight: $font-weight-sm
+        color: $mobile-blue
+        padding: 0 2rem
+        margin-bottom: .5rem
+        line-height: 1.25rem
 
-
-
-
+.image
+    background-image: url('../../assets/images/drawers.jpg')
+    background-size: 100%
+    background-repeat: no-repeat
+    background-position: top
+    height: 14rem
+    width: 100%
+    border-top-left-radius: 1rem
+    border-top-right-radius: 1rem
+#footer
+    display: none
+    position: relative
+    width: 90%
+    margin-bottom: .5rem
+    .personImage
+        background-image: url("../../assets/images/avatar-michelle.jpg")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: 100%
+        height: 3rem
+        width: 3rem
+        border-radius: 50%
+        position: absolute
+        top: 0
+        left: 2rem
+    h2
+        padding-top: .25rem
+        margin-left: 6rem
+        font-size: $font-size-sm
+        font-weight: $font-weight-lg
+        color: $dark-blue
+    p
+        color: $mobile-blue
+        font-size: $font-size-sm
+        font-weight: $font-weight-sm
+        margin-left: 6rem
+        padding-top: .25rem
+    .shareIcon
+        background-image: url("../..//assets/images/icon-share.svg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 45%
+        position: absolute
+        top: 0
+        right: 0
+        background-color: $light-gray
+        width: 2.5rem
+        height: 2.5rem
+        border-radius: 50%
+#share
+    display: flex
+    width: 100%
+    background-color: $dark-blue
+    position: relative
+    border-bottom-left-radius: 1rem
+    border-bottom-right-radius: 1rem
+    h3
+        margin-top: 2rem
+        margin-left: 10%
+        font-size: $font-size-lg
+        font-weight: $font-weight-sm
+        color: $light-blue
+        letter-spacing: .25rem
+    .facebook
+        background-image: url("../..//assets/images/icon-facebook.svg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 55%
+        width: 2.25rem
+        height: 2.25rem
+        border-radius: 50%
+        margin-left: .25rem
+        margin-top: 1.5rem
+    .twitter
+        background-image: url("../..//assets/images/icon-twitter.svg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 50%
+        width: 2.25rem
+        height: 2.25rem
+        border-radius: 50%
+        margin-top: 1.5rem
+    .pinterest
+        background-image: url("../..//assets/images/icon-pinterest.svg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 55%
+        width: 2.25rem
+        height: 2.25rem
+        border-radius: 50%
+        margin-top: 1.5rem
+    .shareIcon2
+        background-image: url("../..//assets/images/icon-share-two.svg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 45%
+        fill: $white
+        position: absolute
+        top: 1.5rem
+        right: 10%
+        background-color: $light-blue
+        width: 2.25rem
+        height: 2.25rem
+        border-radius: 50%
