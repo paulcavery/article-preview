@@ -55,7 +55,7 @@ body {
 }
 
 #footer {
-  display: none;
+  display: block;
   position: relative;
   width: 90%;
   margin-bottom: 0.5rem;
@@ -101,7 +101,7 @@ body {
 }
 
 #share {
-  display: flex;
+  display: none;
   width: 100%;
   background-color: #48556a;
   position: relative;
@@ -160,4 +160,124 @@ body {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    max-height: 280px;
+    max-width: 730px;
+    position: relative;
+  }
+
+  .image {
+    width: 285px;
+    height: 280px;
+    position: absolute;
+    background-size: 125%;
+    background-position: left;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5%;
+  }
+
+  .content {
+    margin-left: 300px;
+    margin-right: 60px;
+  }
+  .content h1 {
+    margin-bottom: 10px;
+  }
+  .content p {
+    font-size: 0.72rem;
+    margin-bottom: 0;
+  }
+
+  #footer {
+    display: block;
+    margin-left: 300px;
+    width: 45%;
+    /* Tooltip arrow */
+    /* Show the tooltip text when you mouse over the tooltip container */
+  }
+  #footer h2 {
+    font-size: 0.8rem;
+  }
+  #footer p {
+    font-size: 0.68rem;
+  }
+  #footer .tooltip {
+    display: inline-block;
+  }
+  #footer .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    height: 30px;
+    background-color: #48556a;
+    color: #9daec2;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  #footer .tooltip .tooltiptext h3 {
+    font-size: 0.8rem;
+    width: 75px;
+  }
+  #footer .tooltip .tooltiptext p .facebook {
+    background-image: url("../..//assets/images/icon-facebook.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  #footer .tooltip .tooltiptext p .twitter {
+    background-image: url("../..//assets/images/icon-twitter.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  #footer .tooltip .tooltiptext p .pinterest {
+    background-image: url("../..//assets/images/icon-pinterest.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  #footer .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  #footer .tooltip:hover {
+    background-color: #48556a;
+    background-image: url("../..//assets/images/icon-share-two.svg");
+  }
+  #footer .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #share {
+    display: none;
+  }
 }

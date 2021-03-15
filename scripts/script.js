@@ -2,6 +2,7 @@ let footer = document.getElementById("footer");
 let share = document.getElementById("share");
 let footerDisplay = footer.style.display;
 let shareClick = document.getElementsByClassName("shareClick");
+let mediaQuery = window.matchMedia("(min-width: 768px)");
 
 const toggleShare = () => {
 	console.log("clicked");
@@ -18,5 +19,9 @@ const toggleShare = () => {
 	}
 };
 for (var i = 0; i < shareClick.length; i++) {
-	shareClick[i].addEventListener("click", toggleShare);
+	if (!mediaQuery.matches) {
+		shareClick[i].addEventListener("click", toggleShare);
+	} else {
+		footer.style.display = "block";
+	}
 }
