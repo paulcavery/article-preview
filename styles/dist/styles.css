@@ -100,8 +100,8 @@ body {
   border-radius: 50%;
 }
 
-.tooltiptext {
-  display: none;
+div .tooltiptext {
+  visibility: hidden;
 }
 
 #share {
